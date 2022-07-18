@@ -581,6 +581,12 @@ bool canHit(CBlob@ this, CBlob@ b, Vec2f tpos, bool extra = true)
 	return true;
 }
 
+void onDie(CBlob@ this)
+{
+	CPlayer@ p = this.getPlayer();
+	if (p !is null) p.set_string("class_name", this.getName());
+}
+
 void onDetach(CBlob@ this, CBlob@ detached, AttachmentPoint@ attachedPoint)
 {
 	// ignore collision for built blob

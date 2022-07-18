@@ -25,7 +25,7 @@ void onTick(CBlob @ this)
 				if(this.get_u16("cloning_progress") > 300*20){
 					if(getNet().isServer()){
 						
-						string race = "human";
+						string race = player.get_string("class_name") != "" ? player.get_string("class_name") : "human";
 						
 						if(getRoster() !is null){
 							race = getPlayerRace(getRoster(),player);
