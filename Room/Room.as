@@ -608,11 +608,13 @@ f32 onHit(CBlob@ this, Vec2f worldPoint, Vec2f velocity, f32 damage, CBlob@ hitt
 		return 0;
 	} else {
 		if(getNet().isServer())
-		if(this.getTeamNum() != 0 && this.getName() != "reactorroom"){
-			for(int i = 0; i < damage/5; i++){
-				CBlob @scrap = server_CreateBlob("mat_scrap",-1,worldPoint);
-				if(scrap !is null)scrap.server_SetQuantity(1+XORRandom(10));
-				if(scrap !is null)scrap.setVelocity(Vec2f(-(10+XORRandom(15)),XORRandom(21)-10)*0.2f);
+		{
+			if(this.getTeamNum() != 0 && this.getName() != "reactorroom"){
+				for(int i = 0; i < damage/5; i++){
+					CBlob @scrap = server_CreateBlob("mat_scrap",-1,worldPoint);
+					if(scrap !is null)scrap.server_SetQuantity(1+XORRandom(10));
+					if(scrap !is null)scrap.setVelocity(Vec2f(-(10+XORRandom(15)),XORRandom(21)-10)*0.2f);
+				}
 			}
 		}
 	}
