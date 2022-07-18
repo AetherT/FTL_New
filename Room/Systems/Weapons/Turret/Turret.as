@@ -186,6 +186,15 @@ void fireWeapon(CBlob @this){
 	
 	if(this.get_u16("charge_time") >= ChargeTime[GunType]){
 	
+		CBlob@[] reactors;
+		getBlobsByName("reactorroom", reactors);
+		for (u8 i = 0; i < reactors.length; i++)
+		{
+			if (reactors[i] !is null && reactors[i].getTeamNum() == 0)
+			{
+				reactors[i].set_u32("no_scrap", getGameTime()+900); // make it not spawn scrap for 30 seconds if any gun is firing
+			}
+		}
 		if(this.get_u8("shots_cooldown") <= 0){
 			
 			if(ProjectileType[GunType] != ""){
