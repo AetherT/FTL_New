@@ -39,7 +39,7 @@ void onTick(CBlob @ this){
 		menu.AddButton("$engi_icon$", "Engi", this.getCommandID("picked_engi"),params).hoverText = "It's unclear if the Engi are partly organic or entirely mechanical, but it's well known that they make exceptional engineers.\n\n- Repair speed is doubled\n- Combat damage is halved.";
 		menu.AddButton("$zoltan_icon$", "Zoltan", this.getCommandID("picked_zoltan"),params).hoverText = "The Zoltan are allies of the Engi. Their innate energy can power ship systems.\n\n- Provides power to occupied system \n- Explodes upon death, dealing 15 damage to each enemy in room (lol, what enemies)\n- 70% Health";
 		menu.AddButton("$mantis_icon$", "Mantis", this.getCommandID("picked_mantis"),params).hoverText = "The Mantis disregard for individual lives led to their evolution as a vicious warrior race.\n\n- Combat damage is increased by 50%\n- 120% Movement speed\n- Repair speed halved";
-		menu.AddButton("$rock_icon$", "Rock", this.getCommandID("picked_rock"),params).hoverText = "The Rockmen of Vrachos IV are rarely seen and are known for their fortitude.\n\n- Immune to fire\n- 150% Health\n- 50% Movement speed";
+		menu.AddButton("$rock_icon$", "Rock", this.getCommandID("picked_rock"),params).hoverText = "The Rockmen of Vrachos IV are rarely seen and are known for their fortitude.\n\n- Immune to fire\n- 200% Health\n- 75% Movement speed";
 		menu.AddButton("$slug_icon$", "Slug", this.getCommandID("picked_slug"),params).hoverText = "These telepathic Slugs were shunned in the Galactic Federation for their constant thievery and attempts at manipulation.\n\n- Telepathic powers reveal rooms and other lifeforms.";
 	}
 	
