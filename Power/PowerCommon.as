@@ -6,5 +6,5 @@ void collectRooms(CBlob@[] @rooms){
 	getBlobsByName("oxygen_generator", rooms);
 	getBlobsByName("cloning_bay", rooms);
 	getBlobsByName("weapon_room", rooms);
-        getBlobsByName("scrap_miner",rooms);
+    //getBlobsByName("scrap_miner",rooms);
 }

@@ -164,10 +164,10 @@ void onInit(CBlob@ this)
 			ShopItem@ s = addShopItem(this, "Windows", "$window_icon$", "twobytwowindowroom", "A nice view");
 			AddRequirement(s.requirements, "blob", "mat_scrap", "Scrap", 0);
 		}
-		{
-			ShopItem@ s = addShopItem(this, "Scrap Miner", "$window_icon$", "scrap_miner", "infinite scraps!!!");
-			AddRequirement(s.requirements, "blob", "mat_scrap", "Scrap", 100);
-		}
+		//{
+		//	ShopItem@ s = addShopItem(this, "Scrap Miner", "$window_icon$", "scrap_miner", "infinite scraps!!!");
+		//	AddRequirement(s.requirements, "blob", "mat_scrap", "Scrap", 100);
+		//}
 		
 		this.Tag("power_lights");
 	}
